@@ -8,15 +8,16 @@ import AddToCartOffCanvas from './components/AddToCartOffCanvas';
 
 export default function App() {
   const [cartItems, setCartIems] = useState([]);
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItem, setSelectedItem] = useState([]);
 
   const handleCardClick = (item) => {
-    setSelectedItem(item);
+    console.log(item)
+    setSelectedItem([item]);
   };
 
-  const handleCloseOffcanvas = () => {
-    setSelectedItem(null);
-  };
+  // const handleCloseOffcanvas = () => {
+  //   setSelectedItem(null);
+  // };
   const addToCart = (item) => {
     console.log(item);
     setCartIems([...cartItems, item]);
@@ -25,9 +26,9 @@ export default function App() {
   return (
     <>
       <CartViewOffCanvas cartItems={cartItems}/>
-      <AddToCartOffCanvas cartItems={cartItems}/>
+      <AddToCartOffCanvas selectedItem={selectedItem} addToCart={addToCart} />
       <Header cartCounter={cartItems.length}/>  
-      <MenuPage handleCardClick={handleCardClick} addToCart={addToCart}/>
+      <MenuPage handleCardClick={handleCardClick}  addToCart={addToCart}/>
       <Footer />
 
     </>

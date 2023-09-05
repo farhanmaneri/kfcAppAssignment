@@ -1,16 +1,16 @@
 import React from "react";
 import AddToCartCard from "./AddToCartCard";
 
-function AddToCartOffCanvas({ cartItems }) {
+function AddToCartOffCanvas({ selectedItem,addToCart }) {
   return (
     <div
       class="offcanvas offcanvas-end"
-      tabindex="-1"
+      tabIndex="-1"
       id="offcanvasRight1"
       aria-labelledby="offcanvasRightLabel1"
     >
       <div class="offcanvas-header">
-        <h5 id="offcanvasRightLabel1">Offcanvas right</h5>
+        <h5 id="offcanvasRightLabel1">Bucket Items</h5>
         <button
           type="button"
           class="btn-close text-reset"
@@ -18,15 +18,14 @@ function AddToCartOffCanvas({ cartItems }) {
           aria-label="Close"
         ></button>
       </div>
-      <div class="offcanvas-body">
-        <div className="row row-cols-1 ">
-          {cartItems.map((item) => (
+      <div class="offcanvas-body d-flex justify-content-center">
+        <div className="row row-cols-1  ">
+          {selectedItem.map((item) => (
             <div className="d-flex flex-column">
-              <AddToCartCard key={item.id} item={item} />
+            <AddToCartCard key={item.id} item={item} selectedItem={selectedItem}  addToCart={addToCart}/>
             </div>
           ))}
         </div>{" "}
-      <button className="btn btn-primary">Add To Cart</button>
       </div>
     </div>
   );

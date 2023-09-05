@@ -26,8 +26,10 @@ export default function CartViewOffCanvas({ cartItems }) {
              <div className="row row-cols-1 ">
         
              {
-                 cartItems.map(item => <div className="d-flex flex-column"><AddToCartCard key={item.id} item={item}  /></div>)
+                 cartItems.map(item => <div className="d-flex flex-column"><AddToCartCard key={item.id} item={item}  />
+                 </div>)
              }
+
              </div>
             // cartItems.map((c) => (
             //   <div >
