@@ -4,7 +4,7 @@ import CatButtons from "../components/CatButtons";
 import Pagination from "../components/Pagination";
 import { allItems } from "../data/prodcutsData";
 
-export default function MenuPage({ addToCart }) {
+export default function MenuPage({ addToCart,handleCardClick }) {
   const [selectedCatId, setSelectedCatid] = useState(null);
   const [products, setProducts] = useState(allItems);
 
@@ -20,7 +20,7 @@ export default function MenuPage({ addToCart }) {
     <>
       <div className="container mb-5">
         <CatButtons onCatSelection={onCatSelection} selectedCatId={selectedCatId}/>
-        <Products addToCart={addToCart} items={products} />
+        <Products addToCart={addToCart} handleCardClick={handleCardClick} items={products} />
         <Pagination />
       </div>
     </>

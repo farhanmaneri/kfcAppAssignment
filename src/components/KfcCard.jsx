@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function KfcCard({item, addToCart}) {
+export default function KfcCard({item,handleCardClick, addToCart}) {
   return (
     <div className="col">
     <div className="card" style={{ width: "18rem" }}>
@@ -17,7 +17,7 @@ export default function KfcCard({item, addToCart}) {
         type="button" data-bs-toggle="offcanvas" 
         data-bs-target="#offcanvasRight1"
          aria-controls="offcanvasRight1"
-         onClick={() => addToCart(item)}
+         onClick={() => handleCardClick(item)}
           >
           Add to Cart
         </button>
