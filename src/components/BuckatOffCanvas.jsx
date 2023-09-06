@@ -1,7 +1,8 @@
 import React from "react";
-import AddToCartCard from "./AddToCartCard";
+import BuckatCard from "./BuckatCard";
 
-function AddToCartOffCanvas({ selectedItem,addToCart }) {
+
+function BuckatOffCanvas({ selectedItem,addToCart }) {
   return (
     <div
       class="offcanvas offcanvas-end"
@@ -22,7 +23,7 @@ function AddToCartOffCanvas({ selectedItem,addToCart }) {
         <div className="row row-cols-1  ">
           {selectedItem.map((item) => (
             <div className="d-flex flex-column">
-            <AddToCartCard key={item.id} item={item} selectedItem={selectedItem}  addToCart={addToCart}/>
+            <BuckatCard key={item.id} item={item} selectedItem={selectedItem}  addToCart={addToCart}/>
             </div>
           ))}
         </div>{" "}
@@ -31,4 +32,4 @@ function AddToCartOffCanvas({ selectedItem,addToCart }) {
   );
 }
 
-export default AddToCartOffCanvas;
+export default BuckatOffCanvas;

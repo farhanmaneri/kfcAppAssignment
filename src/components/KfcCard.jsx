@@ -3,8 +3,8 @@ import React from "react";
 export default function KfcCard({item,handleCardClick}) {
   return (
     <div className="col">
-    <div className="card" style={{ width: "18rem" }}>
-      <img src={item.image} className="card-img-top" alt="kfc card" />
+    <div className="card" style={{ width: "18rem",height:" 30rem" }}>
+      <img src={item.image} className="card-img-top" style={{height:'15rem'}} alt="kfc card" />
       <div className="card-body">
         <h5 className="card-title">{item.title}</h5>
         <p className="card-text">

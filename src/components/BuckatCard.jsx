@@ -1,6 +1,6 @@
 import React from "react";
 
-function AddToCartCard({ item, selectedItem,addToCart }) {
+function BuckatCard({ item, selectedItem, addToCart }) {
   return (
     <div className="col d-flex justify-content-center">
       <div className="card" style={{ width: "18rem" }}>
@@ -21,15 +21,16 @@ function AddToCartCard({ item, selectedItem,addToCart }) {
             {/* <h5>{selectedItem.length}</h5> */}
             <button className="btn btn-danger rounded-circle">+</button>
           </div>
-          <button type="button"
-          className="btn btn-primary"
-          data-bs-dismiss="offcanvas"
-          onClick={()=>addToCart(item)} >Add To Cart</button>
-
+          <div className="d-flex justify-content-center mt-5 ">
+            <button type="button"
+              className="col-md-6 .offset-md-3 btn btn-primary"
+              data-bs-dismiss="offcanvas"
+              onClick={() => addToCart(item)} >Add To Cart</button>
+          </div>
         </div>
       </div>
-    </div> 
+    </div>
   );
 }
 
-export default AddToCartCard;
+export default BuckatCard;

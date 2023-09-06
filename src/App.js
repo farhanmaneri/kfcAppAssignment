@@ -3,7 +3,7 @@ import Header from './components/Header'
 import MenuPage from "./pages/MenuPage";
 import CartViewOffCanvas from './components/CartViewOffCanvas';
 import Footer from './components/Footer';
-import AddToCartOffCanvas from './components/AddToCartOffCanvas';
+import BuckatOffCanvas from './components/BuckatOffCanvas';
  
 
 export default function App() {
@@ -26,9 +26,9 @@ export default function App() {
   return (
     <>
       <CartViewOffCanvas cartItems={cartItems}/>
-      <AddToCartOffCanvas selectedItem={selectedItem} addToCart={addToCart} />
+      <BuckatOffCanvas selectedItem={selectedItem} addToCart={addToCart} />
       <Header cartCounter={cartItems.length}/>  
-      <MenuPage handleCardClick={handleCardClick}  addToCart={addToCart}/>
+      <MenuPage handleCardClick={handleCardClick}  />
       <Footer />
 
     </>

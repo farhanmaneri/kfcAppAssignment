@@ -1,5 +1,6 @@
 import React from "react";
-import AddToCartCard from "./AddToCartCard";
+import BuckatCard from "./BuckatCard";
+import CartCard from "./CartCard";
 
 export default function CartViewOffCanvas({ cartItems }) {
   return (
@@ -26,7 +27,8 @@ export default function CartViewOffCanvas({ cartItems }) {
              <div className="row row-cols-1 ">
         
              {
-                 cartItems.map(item => <div className="d-flex flex-column"><AddToCartCard key={item.id} item={item}  />
+                 cartItems.map(item => <div className="d-flex flex-column"><CartCard key={item.id} item={item}  />
+
                  </div>)
              }
 
