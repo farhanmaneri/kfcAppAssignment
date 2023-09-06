@@ -18,7 +18,7 @@ export default function MenuPage({ addToCart,handleCardClick }) {
 
   return (
     <>
-      <div className="container mb-5">
+      <div className="container-fluid mb-5">
         <CatButtons onCatSelection={onCatSelection} selectedCatId={selectedCatId}/>
         <Products addToCart={addToCart} handleCardClick={handleCardClick} items={products} />
         <Pagination />

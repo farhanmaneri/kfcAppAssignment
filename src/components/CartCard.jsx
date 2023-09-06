@@ -17,7 +17,7 @@ function CartCard({ item }) {
                     <h5 className="badge text-bg-info">Rs. {item.price}</h5>
                     <div className="d-flex justify-content-around">
                         <button className="btn btn-danger rounded-circle ">-</button>
-                        {/* <h5>{selectedItem.length}</h5> */}
+                        {/* <h5>{qty}</h5> */}
                         <button className="btn btn-danger rounded-circle">+</button>
                     </div>
                 </div>

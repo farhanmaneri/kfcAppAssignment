@@ -18,7 +18,7 @@ function BuckatCard({ item, selectedItem, addToCart }) {
           <h3 className="badge text-bg-info">Rs. {item.price}</h3>
           <div className="d-flex justify-content-around">
             <button className="btn btn-danger rounded-circle ">-</button>
-            {/* <h5>{selectedItem.length}</h5> */}
+            {/* <h5>{item.qty}</h5> */}
             <button className="btn btn-danger rounded-circle">+</button>
           </div>
           <div className="d-flex justify-content-center mt-5 ">

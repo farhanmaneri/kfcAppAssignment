@@ -2,7 +2,7 @@ import React from "react";
 
 export default function KfcCard({item,handleCardClick}) {
   return (
-    <div className="col">
+    <div className="col mt-2">
     <div className="card" style={{ width: "18rem",height:" 30rem" }}>
       <img src={item.image} className="card-img-top" style={{height:'15rem'}} alt="kfc card" />
       <div className="card-body">
