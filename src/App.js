@@ -4,7 +4,8 @@ import MenuPage from "./pages/MenuPage";
 import CartViewOffCanvas from './components/CartViewOffCanvas';
 import Footer from './components/Footer';
 import BuckatOffCanvas from './components/BuckatOffCanvas';
- 
+import Swal from 'sweetalert2';
+
 
 export default function App() {
   const [cartItems, setCartIems] = useState([]);
@@ -29,9 +30,14 @@ export default function App() {
        cartItems[index].total=cartItems[index].price*cartItems[index].qty
     }
     setCartIems([...cartItems]);
-  
-    console.log(cartItems)
-    console.log(item)
+    
+    Swal.fire(
+      '',
+      'Item Added to Cart!' ,
+      'success'
+    )
+    // console.log(cartItems)
+    // console.log(item)
   }
   
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Swal from "sweetalert2";
 
 function BuckatCard({ item, selectedItem, addToCart }) {
   return (
@@ -8,7 +9,7 @@ function BuckatCard({ item, selectedItem, addToCart }) {
         <div>
           <img
             src={item.image}
-            style={{ height: "11rem" }}
+            style={{ height: "10rem" }}
             className="card-img-top"
             alt="kfc card"
           />

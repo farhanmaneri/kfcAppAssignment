@@ -11,16 +11,16 @@ export default function KfcCard({item,handleCardClick}) {
             {item.description}
             <span className="badge text-bg-info">Rs. {item.price}</span>
         </p>
-        
+        <div className="d-flex justify-content-center">
         <button 
-        class="btn btn-primary" 
+        class="btn btn-danger" 
         type="button" data-bs-toggle="offcanvas" 
         data-bs-target="#offcanvasRight1"
          aria-controls="offcanvasRight1"
          onClick={() => handleCardClick(item)}
           >
         + Add To Bucket
-        </button>
+        </button></div>
 
       </div>
     </div>

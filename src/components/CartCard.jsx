@@ -13,7 +13,7 @@ function CartCard({ item }) {
                         alt="kfc card"
                     />
                 </div>
-                <div className="card-body">
+                <div className="card-body ">
                     <h5 className="badge text-bg-info">Rs. {item.price}</h5>
                     <div className="d-flex justify-content-around">
                         <button className="btn btn-danger rounded-circle ">-</button>
