@@ -8,7 +8,7 @@ export default function KfcCard({item,handleCardClick}) {
       <div className="card-body">
         <h5 className="card-title">{item.title}</h5>
         <p className="card-text">
-            {item.description}
+            {/* {item.description} */}
             <span className="badge text-bg-info">Rs. {item.price}</span>
         </p>
         <div className="d-flex justify-content-center">

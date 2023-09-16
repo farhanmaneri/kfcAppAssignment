@@ -1,8 +1,13 @@
 import React from "react";
 import BuckatCard from "./BuckatCard";
 
-
-function BuckatOffCanvas({ selectedItem,addToCart }) {
+function BuckatOffCanvas({ selectedItem, addToCart,  incrementCart }) {
+  function calculateQuantity(item) {
+    const selectedItemsCount = selectedItem.filter(
+      (selected) => selected.id === item.id
+    ).length;
+    return selectedItemsCount;
+  }
   return (
     <div
       class="offcanvas offcanvas-end"
@@ -23,7 +28,14 @@ function BuckatOffCanvas({ selectedItem,addToCart }) {
         <div className="row row-cols-1  ">
           {selectedItem.map((item) => (
             <div className="d-flex flex-column">
-            <BuckatCard key={item.id} item={item} selectedItem={selectedItem}  addToCart={addToCart}/>
+              <BuckatCard
+                key={item.id}
+                quantity={calculateQuantity(item)}
+                incrementCart={incrementCart}
+                item={item}
+                selectedItem={selectedItem}
+                addToCart={addToCart}
+              />
             </div>
           ))}
         </div>{" "}

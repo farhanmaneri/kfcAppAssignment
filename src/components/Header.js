@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import {  Link,} from "react-router-dom";
 export default function Header({cartCounter}) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary ">
@@ -11,11 +11,9 @@ export default function Header({cartCounter}) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
+<Link to={'/'}> Home</Link>        </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Link</a>
-        </li>
+<Link to='/menupage'>MenuPage</Link>        </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown

@@ -1,7 +1,7 @@
 import React from "react";
 import Swal from "sweetalert2";
 
-function BuckatCard({ item, selectedItem, addToCart }) {
+function BuckatCard({ item, selectedItem, addToCart , quantity, incrementCart }) {
   return (
     <div className="col d-flex justify-content-center">
       <div className="card" style={{ width: "18rem" }}>
@@ -19,8 +19,8 @@ function BuckatCard({ item, selectedItem, addToCart }) {
           <h3 className="badge text-bg-info">Rs. {item.price}</h3>
           <div className="d-flex justify-content-around">
             <button className="btn btn-danger rounded-circle ">-</button>
-            {/* <h5>{item.qty}</h5> */}
-            <button className="btn btn-danger rounded-circle">+</button>
+            <h5>{quantity}</h5>
+            <button onClick={()=>incrementCart(item)} className="btn btn-danger rounded-circle">+</button>
           </div>
           <div className="d-flex justify-content-center mt-5 ">
             <button type="button"

@@ -1,20 +1,23 @@
-import React from "react";
-import { catgories } from "../data/categories";
+import React ,{useState,useEffect}from "react";
+// import {categories } from '../data/categories'
+export default function CatButtons({onCatSelection,categories, selectedCatId}) {
 
-export default function CatButtons({onCatSelection, selectedCatId}) {
+   
+  
   return (
     <>
-      {catgories.map((cat) => (
+      {categories && categories.map((cat) => (
         <button 
           type="button" 
           className={
             `m-1 btn 
-            ${cat.id === selectedCatId? 'btn-info': 'btn-primary'}`
+            ${cat === selectedCatId? 'btn-info': 'btn-primary'}`
           }
-          key={cat.id} 
-          onClick={() => onCatSelection(cat.id)}
+          key={cat} 
+          onClick={() => onCatSelection(cat)}
+          
         >
-          {cat.title}
+          {cat}
         </button>
       ))}
     </>
