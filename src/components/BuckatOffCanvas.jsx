@@ -10,21 +10,21 @@ function BuckatOffCanvas({ selectedItem, addToCart,  incrementCart }) {
   }
   return (
     <div
-      class="offcanvas offcanvas-end"
+      className="offcanvas offcanvas-end"
       tabIndex="-1"
       id="offcanvasRight1"
       aria-labelledby="offcanvasRightLabel1"
     >
-      <div class="offcanvas-header">
+      <div className="offcanvas-header">
         <h5 id="offcanvasRightLabel1">Bucket Items</h5>
         <button
           type="button"
-          class="btn-close text-reset"
+          className="btn-close text-reset"
           data-bs-dismiss="offcanvas"
           aria-label="Close"
         ></button>
       </div>
-      <div class="offcanvas-body d-flex justify-content-center">
+      <div className="offcanvas-body d-flex justify-content-center">
         <div className="row row-cols-1  ">
           {selectedItem.map((item) => (
             <div className="d-flex flex-column">

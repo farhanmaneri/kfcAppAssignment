@@ -1,6 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 export default function KfcCard({item,handleCardClick}) {
+const navigate = useNavigate()
+
+
+
   return (
     <div className="col mt-2">
     <div className="card" style={{ width: "18rem",height:" 30rem" }}>
@@ -13,7 +18,7 @@ export default function KfcCard({item,handleCardClick}) {
         </p>
         <div className="d-flex justify-content-center">
         <button 
-        class="btn btn-danger" 
+        className="btn btn-danger" 
         type="button" data-bs-toggle="offcanvas" 
         data-bs-target="#offcanvasRight1"
          aria-controls="offcanvasRight1"
@@ -21,6 +26,9 @@ export default function KfcCard({item,handleCardClick}) {
           >
         + Add To Bucket
         </button></div>
+        <button onClick={()=>{navigate(`products/${item.id}`)}}>
+        Detail
+        </button>
 
       </div>
     </div>

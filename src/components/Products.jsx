@@ -1,7 +1,9 @@
 import React from "react";
 import KfcCard from "./KfcCard";
+import ProductInfo from "../pages/ProductInfo";
 
 export default function Products({ loading, error,addToCart, handleCardClick, items }) {
+ console.log("product items====>",items)
   return (
     <>
       
@@ -19,7 +21,7 @@ export default function Products({ loading, error,addToCart, handleCardClick, it
         ))}
       </div>}
       </div>
-      
+      {/* <ProductInfo items={items} /> */}
     </>
   );
 }
